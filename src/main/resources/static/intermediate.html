@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intermediate to Degree</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Intermediate to Degree Prediction</h1>
+        </header>
+        <form action="/predict-intermediate" method="post">
+            <input type="number" name="maths" placeholder="Maths Marks (%)" required>
+            <input type="number" name="physics" placeholder="Physics Marks (%)" required>
+            <input type="number" name="chemistry" placeholder="Chemistry Marks (%)" required>
+            <button type="submit" class="btn">Predict</button>
+        </form>
+    </div>
+</body>
+</html>

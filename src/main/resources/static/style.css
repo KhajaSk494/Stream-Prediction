@@ -1,0 +1,73 @@
+/* Add stylish and responsive design for all pages */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    max-width: 600px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center text in the container */
+}
+
+header h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+header p {
+    font-size: 16px;
+    color: #666; /* Slightly lighter color for the paragraph */
+}
+
+.nav {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 15px; /* Space between buttons */
+    margin-top: 20px; /* Space above the navigation */
+}
+
+.nav-btn {
+    display: inline-block;
+    padding: 15px 30px; /* Padding for button */
+    font-size: 18px; /* Font size */
+    color: white; /* Text color */
+    background-color: #007bff; /* Button background color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.nav-btn:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+form button {
+    background: #ff7e5f;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
