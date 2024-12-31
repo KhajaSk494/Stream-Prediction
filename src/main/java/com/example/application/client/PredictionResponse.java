@@ -6,6 +6,7 @@ public class PredictionResponse {
     private String prediction;
     private List<String> suggestions;
 
+    // Getters and Setters
     public String getPrediction() {
         return prediction;
     }
@@ -24,6 +25,9 @@ public class PredictionResponse {
 
     @Override
     public String toString() {
-        return "PredictionResponse [prediction=" + prediction + ", suggestions=" + suggestions + "]";
+        return "PredictionResponse{" +
+                "prediction='" + prediction + '\'' +
+                ", suggestions=" + suggestions +
+                '}';
     }
 }

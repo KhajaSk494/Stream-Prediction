@@ -1,18 +1,11 @@
 package com.example.application.data.entity;
 
 public class IntermediateSubjects {
-    private Integer maths;
     private Integer physics;
     private Integer chemistry;
+    private Integer mathematics;
 
-    public Integer getMaths() {
-        return maths;
-    }
-
-    public void setMaths(Integer maths) {
-        this.maths = maths;
-    }
-
+    // Getters and Setters
     public Integer getPhysics() {
         return physics;
     }
@@ -29,8 +22,16 @@ public class IntermediateSubjects {
         this.chemistry = chemistry;
     }
 
+    public Integer getMathematics() {
+        return mathematics;
+    }
+
+    public void setMathematics(Integer mathematics) {
+        this.mathematics = mathematics;
+    }
+
     @Override
     public String toString() {
-        return "IntermediateSubjects [maths=" + maths + ", physics=" + physics + ", chemistry=" + chemistry + "]";
+        return "IntermediateSubjects [physics=" + physics + ", chemistry=" + chemistry + ", mathematics=" + mathematics + "]";
     }
 }

@@ -5,6 +5,7 @@ public class SchoolSubjects {
     private Integer science;
     private Integer social;
 
+    // Getters and Setters
     public Integer getMaths() {
         return maths;
     }

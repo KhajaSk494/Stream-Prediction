@@ -1,73 +1,90 @@
-/* Add stylish and responsive design for all pages */
+/* General body styling */
 body {
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom, #d7e7ff, #a1c4fd);
+    color: #333;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header styling */
+header {
+    background-color: #4682b4;
+    color: white;
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Section container */
+.section-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
+    margin: 40px auto;
+    flex-wrap: wrap;
 }
 
-.container {
-    max-width: 600px;
-    background: #fff;
-    border-radius: 10px;
+/* Section cards */
+.section {
+    background-color: #87ceeb;
+    margin: 10px;
+    padding: 30px;
+    border-radius: 15px;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.section:hover {
+    background-color: #4682b4;
+    transform: scale(1.05);
+    color: white;
+}
+
+/* Links in sections */
+.section a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Form container */
+.form-container {
+    background: #ffffff;
+    margin: 50px auto;
     padding: 20px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    text-align: center; /* Center text in the container */
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-header h1 {
-    font-size: 24px;
-    color: #333;
-}
-
-header p {
-    font-size: 16px;
-    color: #666; /* Slightly lighter color for the paragraph */
-}
-
-.nav {
-    display: flex;
-    flex-direction: column; /* Stack buttons vertically */
-    gap: 15px; /* Space between buttons */
-    margin-top: 20px; /* Space above the navigation */
-}
-
-.nav-btn {
-    display: inline-block;
-    padding: 15px 30px; /* Padding for button */
-    font-size: 18px; /* Font size */
-    color: white; /* Text color */
-    background-color: #007bff; /* Button background color */
-    border: none; /* Remove border */
-    border-radius: 5px; /* Rounded corners */
-    text-decoration: none; /* Remove underline */
-    transition: background-color 0.3s; /* Smooth transition for hover effect */
-}
-
-.nav-btn:hover {
-    background-color: #0056b3; /* Darker shade on hover */
-}
-
-form {
-    display: flex;
-    flex-direction: column;
+form label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
 }
 
 form input {
+    width: 100%;
+    padding: 8px;
     margin-bottom: 15px;
-    padding: 10px;
+    border: 1px solid #ccc;
     border-radius: 5px;
-    border: 1px solid #ddd;
 }
 
 form button {
-    background: #ff7e5f;
-    color: #fff;
-    padding: 10px 15px;
+    background-color: #4682b4;
+    color: white;
     border: none;
+    padding: 10px 15px;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 16px;
+}
+
+form button:hover {
+    background-color: #5a9bd8;
 }

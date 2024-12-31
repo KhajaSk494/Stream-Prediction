@@ -1,27 +1,37 @@
 package com.example.application.data.entity;
 
 public class DegreeSubjects {
-    private Integer degreeScore;
-    private String interest;
+    private Integer cs;
+    private Integer it;
+    private Integer ec;
 
-    public Integer getDegreeScore() {
-        return degreeScore;
+    // Getters and Setters
+    public Integer getCs() {
+        return cs;
     }
 
-    public void setDegreeScore(Integer degreeScore) {
-        this.degreeScore = degreeScore;
+    public void setCs(Integer cs) {
+        this.cs = cs;
     }
 
-    public String getInterest() {
-        return interest;
+    public Integer getIt() {
+        return it;
     }
 
-    public void setInterest(String interest) {
-        this.interest = interest;
+    public void setIt(Integer it) {
+        this.it = it;
+    }
+
+    public Integer getEc() {
+        return ec;
+    }
+
+    public void setEc(Integer ec) {
+        this.ec = ec;
     }
 
     @Override
     public String toString() {
-        return "DegreeSubjects [degreeScore=" + degreeScore + ", interest=" + interest + "]";
+        return "DegreeSubjects [cs=" + cs + ", it=" + it + ", ec=" + ec + "]";
     }
 }

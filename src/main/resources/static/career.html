@@ -3,18 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Career Development</title>
     <link rel="stylesheet" href="style.css">
+    <title>Career Development</title>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Career Development Prediction</h1>
-        </header>
-        <form action="/predict-career" method="post">
-            <input type="number" name="degreeScore" placeholder="Degree Marks (%)" required>
-            <input type="text" name="interest" placeholder="Your Interest (e.g., Engineering)" required>
-            <button type="submit" class="btn">Predict</button>
+    <header>
+        <h1>Career Development</h1>
+    </header>
+    <div class="form-container">
+        <form action="/api/predict-career" method="post">
+            <label for="cs">Computer Science:</label>
+            <input type="number" id="cs" name="cs" required><br>
+            <label for="it">Information Technology:</label>
+            <input type="number" id="it" name="it" required><br>
+            <label for="ec">Electronics and Communication:</label>
+            <input type="number" id="ec" name="ec" required><br>
+            <button type="submit">Predict</button>
         </form>
     </div>
 </body>

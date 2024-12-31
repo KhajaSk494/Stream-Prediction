@@ -6,42 +6,32 @@ import com.example.application.data.entity.IntermediateSubjects;
 import com.example.application.data.entity.DegreeSubjects;
 import org.springframework.stereotype.Service;
 
-import java.util.Arrays;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 @Service
 public class PredictionService {
 
-    private static final Map<String, List<String>> COLLEGE_SUGGESTIONS = new HashMap<>();
-
-    static {
-        COLLEGE_SUGGESTIONS.put("Engineering", Arrays.asList("IIT Delhi", "IIT Bombay", "NIT Trichy"));
-        COLLEGE_SUGGESTIONS.put("Medical", Arrays.asList("AIIMS Delhi", "CMC Vellore", "Kasturba Medical College"));
-        COLLEGE_SUGGESTIONS.put("Commerce", Arrays.asList("SRCC", "Loyola College", "Christ University"));
-        // Add more streams and colleges here
-    }
-
-    public PredictionResponse predictSchool(SchoolSubjects features) {
-        String prediction = "Science"; // Example logic
-        return createResponse(prediction);
-    }
-
-    public PredictionResponse predictIntermediate(IntermediateSubjects features) {
-        String prediction = "Engineering"; // Example logic
-        return createResponse(prediction);
-    }
-
-    public PredictionResponse predictCareer(DegreeSubjects features) {
-        String prediction = "Software Developer"; // Example logic
-        return createResponse(prediction);
-    }
-
-    private PredictionResponse createResponse(String prediction) {
+    public PredictionResponse predictSchool(SchoolSubjects schoolSubjects) {
+        // Example logic
         PredictionResponse response = new PredictionResponse();
-        response.setPrediction(prediction);
-        response.setSuggestions(COLLEGE_SUGGESTIONS.getOrDefault(prediction, Arrays.asList("No suggestions available")));
+        response.setPrediction("Science");
+        response.setSuggestions(List.of("IIT Delhi", "NIT Trichy", "IIT Bombay"));
+        return response;
+    }
+
+    public PredictionResponse predictIntermediate(IntermediateSubjects intermediateSubjects) {
+        // Example logic
+        PredictionResponse response = new PredictionResponse();
+        response.setPrediction("Engineering");
+        response.setSuggestions(List.of("NIT Warangal", "BITS Pilani", "VIT Vellore"));
+        return response;
+    }
+
+    public PredictionResponse predictCareer(DegreeSubjects degreeSubjects) {
+        // Example logic
+        PredictionResponse response = new PredictionResponse();
+        response.setPrediction("Software Development");
+        response.setSuggestions(List.of("Google", "Microsoft", "Amazon"));
         return response;
     }
 }

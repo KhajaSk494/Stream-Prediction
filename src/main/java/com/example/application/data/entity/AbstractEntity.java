@@ -1,39 +1,23 @@
 package com.example.application.data;
 
-import javax.persistence.*;
-import java.time.LocalDateTime;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.MappedSuperclass;
+import java.io.Serializable;
 
 @MappedSuperclass
-public abstract class AbstractEntity {
+public abstract class AbstractEntity implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private LocalDateTime createdDate;
-
-    private LocalDateTime updatedDate;
-
-    @PrePersist
-    protected void onCreate() {
-        createdDate = LocalDateTime.now();
-        updatedDate = LocalDateTime.now();
-    }
-
-    @PreUpdate
-    protected void onUpdate() {
-        updatedDate = LocalDateTime.now();
-    }
-
     public Long getId() {
         return id;
     }
 
-    public LocalDateTime getCreatedDate() {
-        return createdDate;
-    }
-
-    public LocalDateTime getUpdatedDate() {
-        return updatedDate;
+    public void setId(Long id) {
+        this.id = id;
     }
 }
